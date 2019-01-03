@@ -138,6 +138,7 @@ namespace WebApplication26.Controllers
         }
 
         [HttpPost]
+        [ValidateAntiForgeryToken]
         public ActionResult UploadProductImages(int id, HttpPostedFileBase[] productpictures)
         {
             string uploadPathVirtual = ConfigurationManager.AppSettings["UploadPath"];
